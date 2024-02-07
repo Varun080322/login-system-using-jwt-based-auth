@@ -1,0 +1,40 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        Logged in
+    </h1>
+    <form method="post" action="/logout" style="background-color: transparent;width:15%;margin: 0 auto;">
+            <button type="submit">logout</button>
+        </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <nav>
+        <a href="/logout" class="logout-button">Logout</a>
+    </nav>
+    <div class="container">
+        <h2>Welcome to Your Profile</h2>
+        <div class="profile-info">
+            <p><strong>Username: <%= username %></strong></p>
+            <p><strong>Email: <%= email %></strong></p>
+            <p><strong>Joined Date: <%= time.substring(0,10) %></strong></p>
+
+        </div>
+    </div>
+</body>
+</html>

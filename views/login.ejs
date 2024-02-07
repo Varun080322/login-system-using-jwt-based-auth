@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="/register">Register</a>
+    <a href="/">home</a>
+
+    <div>
+        <form method="post" action="/login">
+            <h1>
+                User Login
+            </h1>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="email" name="email" placeholder="Email" >
+            <div style="position: relative;">
+                <input type="password" name="password" id="password" placeholder="Password" >
+                <span class="password-toggle" onclick="togglePassword()">Show</span>
+            </div>
+            <% if (errMsg) { %>
+                <p style="color: red;font-size: 12px;margin: 0;padding: 0;text-align: end;"><%= errMsg %></p>
+            <% } %>
+            <button class="button" type="submit">Login</button>
+            <a href="/register" class="register-link">Don't have an account? Register here.</a>
+        </form>
+        <a href="/" class="home-button">Back to Home</a>
+    </div>
+    <script src="js/pass.js"></script>
+</body>
+</html>
+

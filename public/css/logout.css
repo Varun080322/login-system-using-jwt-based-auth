@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+h2 {
+    color: #333;
+}
+.message {
+    margin-bottom: 20px;
+    color: #333;
+}
+.login-link {
+    color: #333;
+    text-decoration: underline;
+}
