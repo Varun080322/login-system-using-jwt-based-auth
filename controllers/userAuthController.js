@@ -5,7 +5,7 @@ const passcheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?
 const jwt = require("jsonwebtoken")
 
 const register = (req,res)=>{
-    if(!req.loggedin){
+    if(!req.isloggedIn){
         res.render("register",{pass:"",emailmsg:""});
     }
     else
@@ -14,7 +14,7 @@ const register = (req,res)=>{
     }
 }
 const login = (req,res)=>{
-    if(!req.loggedin){
+    if(!req.isloggedIn){
         res.render("login",{
             errMsg:""
         });

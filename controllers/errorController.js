@@ -1,5 +1,7 @@
 const errorPage = (req,res)=>{
-    res.render("Error");
+    if (req.errorMsg){
+        res.render("Error");
+    }
+    res.redirect("/")
 }
-
 module.exports = {errorPage}

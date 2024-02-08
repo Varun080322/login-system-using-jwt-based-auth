@@ -1,5 +1,8 @@
 const home = (req,res)=>{
-    res.render("home");
+    if (!req.isloggedIn){
+        return res.render("home");
+    }
+    res.redirect("/profile")
 }
 
 module.exports = {home}
